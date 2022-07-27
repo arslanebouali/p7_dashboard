@@ -26,11 +26,6 @@ def main_page():
 
     title ='<h1 style="font-size: 4rem; color: #826d8c"">Prêt à dépenser</h1>'
     st.markdown(title, unsafe_allow_html=True)
-
-    # Add session state
-    if 'key' not in st.session_state:
-        st.session_state['key'] =  str(randint(1000, 100000000))
-
     st.image(Image.open("clip-1089.png"))
 #-----------------------------------------
 #   Sidebar
@@ -46,7 +41,7 @@ st.sidebar.markdown(title, unsafe_allow_html=True)
 
 
 
-selected_page=st.sidebar.selectbox("please select option",options=["","client_base","fill form"])
+selected_page=st.sidebar.selectbox("please select option",options=["","client_base"])
 
 if selected_page=="client_base":
     api_response()
