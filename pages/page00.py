@@ -14,7 +14,7 @@ def api_response( ):
     st.set_option('deprecation.showPyplotGlobalUse', False)
     clients=get_clients()
     client_id = st.selectbox(label="chose client by id", options=clients)
-    API_url = "http://127.0.0.1:5000/"
+    API_url = "https://pretadepenser07.herokuapp.com/"
     API_predict_url = API_url + "predict" + "/" + client_id
     API_explain_url = API_url + "explain" + "/" + client_id
     API_df_maps_url = API_url + "df_maps" + "/" + client_id
